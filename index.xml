@@ -1,56 +1,382 @@
 <?xml version="1.0" encoding="utf-8"?>
 <skin>
-	<information>
-		<name>#1</name>
-		<version>1.0</version>
-		<description>
-			<![CDATA[ 다양한 글을 여러 기기에서 읽기 좋게 보여주는 스킨입니다. ]]>
-		</description>
-		<license>
-			<![CDATA[ MIT License ]]>
-		</license>
-	</information>
-	<author>
-		<name>Tistory</name>
-		<homepage>http://www.tistory.com</homepage>
-		<email>tistoryblog@daum.net</email>
-	</author>
-	<contest>
-		<description>2015 반응형 스킨 공모전 기념스킨</description>
-		<preview>//t1.daumcdn.net/tistory_admin/static/admin/new/skin_preview_ray.png</preview>
-		<document>http://notice.tistory.com/2271</document>
-	</contest>
-	<default>
-		<recentEntries>4</recentEntries>
-		<recentComments>4</recentComments>
-		<recentTrackbacks>4</recentTrackbacks>
-		<itemsOnGuestbook>10</itemsOnGuestbook>
-		<tagsInCloud>30</tagsInCloud>
-		<sortInCloud>3</sortInCloud>
-		<expandComment>1</expandComment>
-		<lengthOfRecentNotice>25</lengthOfRecentNotice>
-		<lengthOfRecentEntry>27</lengthOfRecentEntry>
-		<lengthOfRecentComment>30</lengthOfRecentComment>
-		<lengthOfRecentTrackback>30</lengthOfRecentTrackback>
-		<lengthOfLink>30</lengthOfLink>
-		<showListOnCategory>1</showListOnCategory>
-		<showListOnArchive>1</showListOnArchive>
-		<commentMessage>
-			<none>0</none>
-			<single>1</single>
-		</commentMessage>
-		<trackbackMessage>
-			<none>0</none>
-			<single>1</single>
-		</trackbackMessage>
-		<tree>
-			<color>000000</color>
-			<bgColor>ffffff</bgColor>
-			<activeColor>000000</activeColor>
-			<activeBgColor>eeeeee</activeBgColor>
-			<labelLength>27</labelLength>
-			<showValue>1</showValue>
-		</tree>
-		<contentWidth>7777</contentWidth>
-	</default>
+  <information>
+    <name>Aurora</name>
+    <version>1.0.0</version>
+    <description>
+      <![CDATA[ 오로라 그라디언트와 부드러운 모션을 담은 모던 반응형 스킨입니다. 다크 모드, 자동 목차, 읽기 진행 바, 홈 커버(슬라이더·그리드·캐러셀), 빠른 검색(Ctrl+K), 흐르는 태그 띠, 더 보기 로딩 등을 지원합니다. ('#1' 스킨을 기반으로 전면 재작성) ]]>
+    </description>
+    <license>
+      <![CDATA[ MIT License ]]>
+    </license>
+  </information>
+  <author>
+    <name>가볼만한 곳</name>
+    <homepage>https://livingkitchen.tistory.com</homepage>
+    <email></email>
+  </author>
+  <default>
+    <recentEntries>5</recentEntries>
+    <recentComments>4</recentComments>
+    <recentTrackbacks>4</recentTrackbacks>
+    <itemsOnGuestbook>10</itemsOnGuestbook>
+    <tagsInCloud>30</tagsInCloud>
+    <sortInCloud>3</sortInCloud>
+    <expandComment>1</expandComment>
+    <expandTrackback>0</expandTrackback>
+    <lengthOfRecentNotice>25</lengthOfRecentNotice>
+    <lengthOfRecentEntry>40</lengthOfRecentEntry>
+    <lengthOfRecentComment>30</lengthOfRecentComment>
+    <lengthOfRecentTrackback>30</lengthOfRecentTrackback>
+    <lengthOfLink>30</lengthOfLink>
+    <showListOnCategory>1</showListOnCategory>
+    <showListOnArchive>1</showListOnArchive>
+    <entriesOnPage>9</entriesOnPage>
+    <entriesOnList>9</entriesOnList>
+    <commentMessage>
+      <none>0</none>
+      <single>1</single>
+    </commentMessage>
+    <trackbackMessage>
+      <none>0</none>
+      <single>1</single>
+    </trackbackMessage>
+    <tree>
+      <color>000000</color>
+      <bgColor>ffffff</bgColor>
+      <activeColor>000000</activeColor>
+      <activeBgColor>eeeeee</activeBgColor>
+      <labelLength>27</labelLength>
+      <showValue>1</showValue>
+    </tree>
+    <contentWidth>760</contentWidth>
+    <cover>
+      <![CDATA[
+      [
+        {
+          "name": "slider",
+          "title": "",
+          "dataType": "RECENT",
+          "data": { "category": "ALL", "size": 5 }
+        },
+        {
+          "name": "grid",
+          "title": "최신 글",
+          "dataType": "RECENT",
+          "data": { "category": "ALL", "size": 6 }
+        }
+      ]
+      ]]>
+    </cover>
+  </default>
+
+  <cover>
+    <item>
+      <name>slider</name>
+      <label><![CDATA[ 메인 슬라이더 ]]></label>
+      <description><![CDATA[ 큰 이미지가 자동으로 넘어가는 메인 슬라이드입니다. (3~5개 추천, 대표 이미지가 있는 글에 어울립니다) ]]></description>
+    </item>
+    <item>
+      <name>grid</name>
+      <label><![CDATA[ 카드 그리드 ]]></label>
+      <description><![CDATA[ 썸네일 카드를 격자로 보여줍니다. (3의 배수 추천) ]]></description>
+    </item>
+    <item>
+      <name>carousel</name>
+      <label><![CDATA[ 가로 스크롤 캐러셀 ]]></label>
+      <description><![CDATA[ 옆으로 넘겨 보는 카드 캐러셀입니다. ]]></description>
+    </item>
+    <item>
+      <name>list</name>
+      <label><![CDATA[ 가로형 리스트 ]]></label>
+      <description><![CDATA[ 썸네일·요약·날짜가 있는 가로형 목록입니다. ]]></description>
+    </item>
+    <item>
+      <name>banner</name>
+      <label><![CDATA[ 배너 ]]></label>
+      <description><![CDATA[ 제목·설명·링크를 강조하는 그라디언트 배너입니다. ('직접 입력' 1개 추천) ]]></description>
+    </item>
+  </cover>
+
+  <variables>
+    <variablegroup name="기본 디자인">
+      <variable>
+        <name>theme-default</name>
+        <label><![CDATA[ 기본 테마 ]]></label>
+        <description><![CDATA[ 방문자가 직접 바꾸기 전까지 적용할 테마입니다. (방문자는 상단 해/달 버튼으로 전환할 수 있습니다) ]]></description>
+        <type>SELECT</type>
+        <option><![CDATA[
+          [
+            {"name":"auto", "label":"시스템 설정 따르기", "value":"auto"},
+            {"name":"light", "label":"라이트", "value":"light"},
+            {"name":"dark", "label":"다크", "value":"dark"}
+          ]
+        ]]></option>
+        <default>auto</default>
+      </variable>
+      <variable>
+        <name>accent-color</name>
+        <label><![CDATA[ 메인 포인트 색 ]]></label>
+        <description><![CDATA[ 버튼, 링크, 강조 요소에 쓰이는 색입니다. ]]></description>
+        <type>COLOR</type>
+        <option />
+        <default><![CDATA[#5b4dff]]></default>
+      </variable>
+      <variable>
+        <name>accent-color-2</name>
+        <label><![CDATA[ 보조 포인트 색 ]]></label>
+        <description><![CDATA[ 메인 색과 함께 그라디언트(오로라)를 만드는 색입니다. ]]></description>
+        <type>COLOR</type>
+        <option />
+        <default><![CDATA[#00b8a9]]></default>
+      </variable>
+      <variable>
+        <name>list-layout</name>
+        <label><![CDATA[ 글 목록 레이아웃 ]]></label>
+        <description><![CDATA[ 홈·카테고리·태그·검색 목록의 기본 모양입니다. (방문자가 목록 오른쪽 위 버튼으로 바꿀 수 있습니다) ]]></description>
+        <type>SELECT</type>
+        <option><![CDATA[
+          [
+            {"name":"magazine", "label":"매거진 (첫 글 크게)", "value":"magazine"},
+            {"name":"grid", "label":"카드 그리드", "value":"grid"},
+            {"name":"list", "label":"가로형 리스트", "value":"list"}
+          ]
+        ]]></option>
+        <default>magazine</default>
+      </variable>
+      <variable>
+        <name>corner</name>
+        <label><![CDATA[ 모서리 스타일 ]]></label>
+        <type>SELECT</type>
+        <option><![CDATA[
+          [
+            {"name":"round", "label":"둥글게", "value":"round"},
+            {"name":"soft", "label":"살짝 둥글게", "value":"soft"},
+            {"name":"sharp", "label":"각지게", "value":"sharp"}
+          ]
+        ]]></option>
+        <default>round</default>
+      </variable>
+      <variable>
+        <name>content-size</name>
+        <label><![CDATA[ 본문 글자 크기 ]]></label>
+        <type>SELECT</type>
+        <option><![CDATA[
+          [
+            {"name":"16", "label":"작게 (16px)", "value":"16"},
+            {"name":"17", "label":"보통 (17px)", "value":"17"},
+            {"name":"18", "label":"크게 (18px)", "value":"18"}
+          ]
+        ]]></option>
+        <default>17</default>
+      </variable>
+    </variablegroup>
+
+    <variablegroup name="홈 화면">
+      <variable>
+        <name>hero-enable</name>
+        <label><![CDATA[ 홈 상단 소개(히어로) 영역 ]]></label>
+        <description><![CDATA[ 홈 첫 화면에 블로그 소개와 오로라 배경을 크게 보여줍니다. ]]></description>
+        <type>BOOL</type>
+        <option />
+        <default>true</default>
+      </variable>
+      <variable>
+        <name>hero-eyebrow</name>
+        <label><![CDATA[ 히어로 상단 작은 문구 ]]></label>
+        <description><![CDATA[ 비워두면 '필명의 블로그'가 표시됩니다. ]]></description>
+        <type>STRING</type>
+        <option />
+        <default></default>
+      </variable>
+      <variable>
+        <name>hero-title</name>
+        <label><![CDATA[ 히어로 제목 ]]></label>
+        <description><![CDATA[ 비워두면 블로그 제목이 표시됩니다. ]]></description>
+        <type>STRING</type>
+        <option />
+        <default></default>
+      </variable>
+      <variable>
+        <name>hero-desc</name>
+        <label><![CDATA[ 히어로 설명 ]]></label>
+        <description><![CDATA[ 비워두면 블로그 설명이 표시됩니다. ]]></description>
+        <type>STRING</type>
+        <option />
+        <default></default>
+      </variable>
+      <variable>
+        <name>hero-keywords</name>
+        <label><![CDATA[ 순환 키워드 ]]></label>
+        <description><![CDATA[ 히어로에서 차례로 바뀌며 보이는 키워드입니다. 쉼표(,)로 구분하세요. 비워두면 숨겨집니다. ]]></description>
+        <type>STRING</type>
+        <option />
+        <default><![CDATA[가볼만한 곳,여행 꿀팁,생활 정보,쇼핑 가이드,계절 축제]]></default>
+      </variable>
+      <variable>
+        <name>hero-image</name>
+        <label><![CDATA[ 히어로 배경 이미지 ]]></label>
+        <description><![CDATA[ 선택 사항입니다. 등록하면 오로라 효과 아래에 은은하게 깔립니다. ]]></description>
+        <type>IMAGE</type>
+        <option />
+        <default></default>
+      </variable>
+      <variable>
+        <name>hero-stats</name>
+        <label><![CDATA[ 히어로 통계 (글 수·누적 방문자) ]]></label>
+        <description><![CDATA[ 사이드바 설정에서 '방문자수' 항목이 켜져 있어야 방문자 수가 보입니다. ]]></description>
+        <type>BOOL</type>
+        <option />
+        <default>true</default>
+      </variable>
+      <variable>
+        <name>hero-stack</name>
+        <label><![CDATA[ 히어로 떠 있는 카드 ]]></label>
+        <description><![CDATA[ 넓은 화면에서 최신 글 썸네일 3장을 히어로 오른쪽에 겹쳐 띄웁니다. ]]></description>
+        <type>BOOL</type>
+        <option />
+        <default>true</default>
+      </variable>
+      <variable>
+        <name>tag-marquee</name>
+        <label><![CDATA[ 흐르는 태그 띠 ]]></label>
+        <description><![CDATA[ 히어로 아래에 태그가 천천히 흘러갑니다. (사이드바 설정의 '태그 클라우드' 항목을 사용합니다) ]]></description>
+        <type>BOOL</type>
+        <option />
+        <default>true</default>
+      </variable>
+    </variablegroup>
+
+    <variablegroup name="글 읽기">
+      <variable>
+        <name>toc-enable</name>
+        <label><![CDATA[ 자동 목차 ]]></label>
+        <description><![CDATA[ 본문의 제목(H2~H4)으로 목차를 만듭니다. 넓은 화면에서는 오른쪽에 따라다닙니다. ]]></description>
+        <type>BOOL</type>
+        <option />
+        <default>true</default>
+      </variable>
+      <variable>
+        <name>progress-enable</name>
+        <label><![CDATA[ 읽기 진행 바 ]]></label>
+        <type>BOOL</type>
+        <option />
+        <default>true</default>
+      </variable>
+      <variable>
+        <name>reading-time</name>
+        <label><![CDATA[ 예상 읽기 시간 ]]></label>
+        <type>BOOL</type>
+        <option />
+        <default>true</default>
+      </variable>
+      <variable>
+        <name>post-cover</name>
+        <label><![CDATA[ 대표 이미지 배경 효과 ]]></label>
+        <description><![CDATA[ 글 제목 뒤에 대표 이미지를 흐릿하게 깔아 분위기를 살립니다. ]]></description>
+        <type>BOOL</type>
+        <option />
+        <default>true</default>
+      </variable>
+      <variable>
+        <name>share-enable</name>
+        <label><![CDATA[ 공유 버튼 ]]></label>
+        <description><![CDATA[ 링크 복사, 네이버·페이스북·X 공유, 모바일 기본 공유 버튼을 표시합니다. ]]></description>
+        <type>BOOL</type>
+        <option />
+        <default>true</default>
+      </variable>
+      <variable>
+        <name>author-card</name>
+        <label><![CDATA[ 글 하단 작성자 카드 ]]></label>
+        <type>BOOL</type>
+        <option />
+        <default>true</default>
+      </variable>
+    </variablegroup>
+
+    <variablegroup name="목록">
+      <variable>
+        <name>show-summary</name>
+        <label><![CDATA[ 목록에 요약문 표시 ]]></label>
+        <type>BOOL</type>
+        <option />
+        <default>true</default>
+      </variable>
+      <variable>
+        <name>load-more</name>
+        <label><![CDATA[ '더 보기'로 이어서 불러오기 ]]></label>
+        <description><![CDATA[ 켜면 페이지 번호 대신 '더 보기' 버튼으로 다음 글을 이어서 불러옵니다. ]]></description>
+        <type>BOOL</type>
+        <option />
+        <default>false</default>
+      </variable>
+    </variablegroup>
+
+    <variablegroup name="모션">
+      <variable>
+        <name>motion-enable</name>
+        <label><![CDATA[ 스크롤 등장·인터랙션 효과 ]]></label>
+        <description><![CDATA[ 카드가 부드럽게 떠오르고, 마우스를 따라 빛나는 효과를 줍니다. (기기에서 '동작 줄이기'를 켠 방문자에게는 자동으로 꺼집니다) ]]></description>
+        <type>BOOL</type>
+        <option />
+        <default>true</default>
+      </variable>
+      <variable>
+        <name>page-transition</name>
+        <label><![CDATA[ 페이지 전환 애니메이션 ]]></label>
+        <description><![CDATA[ 지원하는 브라우저(크롬·엣지·사파리 최신)에서 페이지 이동 시 부드럽게 전환됩니다. ]]></description>
+        <type>BOOL</type>
+        <option />
+        <default>true</default>
+      </variable>
+    </variablegroup>
+
+    <variablegroup name="푸터 · SNS">
+      <variable>
+        <name>footer-text</name>
+        <label><![CDATA[ 푸터 문구 ]]></label>
+        <description><![CDATA[ 비워두면 블로그 설명이 표시됩니다. ]]></description>
+        <type>STRING</type>
+        <option />
+        <default></default>
+      </variable>
+      <variable>
+        <name>sns-instagram</name>
+        <label><![CDATA[ 인스타그램 주소 ]]></label>
+        <type>STRING</type>
+        <option />
+        <default></default>
+      </variable>
+      <variable>
+        <name>sns-youtube</name>
+        <label><![CDATA[ 유튜브 주소 ]]></label>
+        <type>STRING</type>
+        <option />
+        <default></default>
+      </variable>
+      <variable>
+        <name>sns-threads</name>
+        <label><![CDATA[ 스레드 주소 ]]></label>
+        <type>STRING</type>
+        <option />
+        <default></default>
+      </variable>
+      <variable>
+        <name>sns-x</name>
+        <label><![CDATA[ X(트위터) 주소 ]]></label>
+        <type>STRING</type>
+        <option />
+        <default></default>
+      </variable>
+      <variable>
+        <name>sns-email</name>
+        <label><![CDATA[ 연락 이메일 ]]></label>
+        <description><![CDATA[ 예: hello@example.com ]]></description>
+        <type>STRING</type>
+        <option />
+        <default></default>
+      </variable>
+    </variablegroup>
+  </variables>
 </skin>
