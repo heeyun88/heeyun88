@@ -1,0 +1,11 @@
+# Preview server caches
+tools/preview/.cache/
+__pycache__/
+*.pyc
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
